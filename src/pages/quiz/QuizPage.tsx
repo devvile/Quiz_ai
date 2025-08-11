@@ -3,7 +3,7 @@ import { useQuestions } from "../../contexts/QuizContext";
 import { useEffect } from "react";
 
 const QuizPage = () => {
-  const { pickQuestionsForQuiz, questionsInQuiz, currentQuestion } =
+  const { pickQuestionsForQuiz, questionsInQuiz, currentQuestion, showResults } =
     useQuestions();
   useEffect(() => {
     pickQuestionsForQuiz(20);
@@ -13,9 +13,9 @@ const QuizPage = () => {
 
   return (
     <>
-      {questionsInQuiz.length > 0 ? (
-        <QuestionItem question={questionsInQuiz[currentQuestion]} />
-      ) : null}
+      {questionsInQuiz.length > 0 && !showResults ? (
+        <QuestionItem question={questionsInQuiz[currentQuestion]} time={10} />
+      ) : <h1>Results</h1>}
     </>
   );
 };
