@@ -1,4 +1,3 @@
-import { Typography, Card } from "@mui/material";
 import QuestionItem from "./components/Question";
 import { useQuestions } from "../../contexts/QuizContext";
 import { useEffect } from "react";
@@ -13,9 +12,11 @@ const QuizPage = () => {
   console.log(questionsInQuiz);
 
   return (
-    <Card sx={{p:4}}>
-      {questionsInQuiz.length>0 ? <QuestionItem question={questionsInQuiz[currentQuestion]}/> : null}
-    </Card>
+    <>
+      {questionsInQuiz.length > 0 ? (
+        <QuestionItem question={questionsInQuiz[currentQuestion]} />
+      ) : null}
+    </>
   );
 };
 
