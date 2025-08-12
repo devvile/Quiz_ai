@@ -8,8 +8,13 @@ interface QuizContextType {
   questionsInQuiz: Question[];
   isLastQuestion: boolean;
   showResults: boolean;
+  selectedAnswer: number | null;
   pickQuestionsForQuiz: (_len: number) => void;
   nextQuestion: () => void;
+  isCorrect: boolean;
+  showAnswers: boolean;
+  handleAnswerSelection: (_optionId: number) => void;
+  resetQuestion: () => void;
 }
 
 const QuestionsContext = createContext<undefined | QuizContextType>(undefined);
@@ -20,10 +25,13 @@ export const QuestionsContextProvider = ({
   children: React.ReactNode;
 }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<null | number>(null);
   const [isLastQuestion, setIsLastQuestion] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
   const [allQuestions] = useState<Question[]>(QUESTIONS);
   const [questionsInQuiz, setQuestionsInQuiz] = useState<Question[]>([]);
+  const [showAnswers, setShowAnswers] = useState(false);
 
   const pickQuestionsForQuiz = (len: number) => {
     const sortRandomly = (arr: Question[]) => {
@@ -51,14 +59,36 @@ export const QuestionsContextProvider = ({
     }
   };
 
+  const resetQuestion = () => {
+    setIsCorrect(false);
+    setSelectedAnswer(null);
+    setShowAnswers(false);
+  };
+
+  const handleAnswerSelection = (optionId: number) => {
+    setSelectedAnswer(optionId);
+
+    // Check answer directly with the optionId parameter instead of using state
+    const currentQuestionObj: Question = questionsInQuiz[currentQuestion];
+    const isAnswerCorrect = optionId === currentQuestionObj.correctAnswer;
+    setIsCorrect(isAnswerCorrect);
+
+    setShowAnswers(true);
+  };
+
   const value = {
     currentQuestion,
     allQuestions,
     questionsInQuiz,
-    pickQuestionsForQuiz,
-    nextQuestion,
     isLastQuestion,
     showResults,
+    selectedAnswer,
+    isCorrect,
+    pickQuestionsForQuiz,
+    nextQuestion,
+    handleAnswerSelection,
+    resetQuestion,
+    showAnswers,
   };
 
   return (

@@ -9,8 +9,6 @@ const QuizPage = () => {
     pickQuestionsForQuiz(20);
   }, []);
 
-  console.log(questionsInQuiz);
-
   return (
     <>
       {questionsInQuiz.length > 0 && !showResults ? (
