@@ -13,8 +13,18 @@ interface QuizContextType {
   nextQuestion: () => void;
   isCorrect: boolean;
   showAnswers: boolean;
+  answerResults: AnswerResult[];
   handleAnswerSelection: (_optionId: number) => void;
   resetQuestion: () => void;
+}
+
+interface AnswerResult {
+  questionIndex: number;
+  question: string;
+  selectedAnswer: number;
+  correctAnswer: number;
+  isCorrect: boolean;
+  answers: string[];
 }
 
 const QuestionsContext = createContext<undefined | QuizContextType>(undefined);
@@ -32,6 +42,7 @@ export const QuestionsContextProvider = ({
   const [allQuestions] = useState<Question[]>(QUESTIONS);
   const [questionsInQuiz, setQuestionsInQuiz] = useState<Question[]>([]);
   const [showAnswers, setShowAnswers] = useState(false);
+  const [answerResults, setAnswerResults] = useState<AnswerResult[]>([]);
 
   const pickQuestionsForQuiz = (len: number) => {
     const sortRandomly = (arr: Question[]) => {
@@ -73,6 +84,15 @@ export const QuestionsContextProvider = ({
     const isAnswerCorrect = optionId === currentQuestionObj.correctAnswer;
     setIsCorrect(isAnswerCorrect);
 
+    const result: AnswerResult = {
+      questionIndex: currentQuestion,
+      question: currentQuestionObj.question,
+      selectedAnswer: optionId,
+      correctAnswer: currentQuestionObj.correctAnswer,
+      isCorrect: isAnswerCorrect,
+      answers: currentQuestionObj.answers,
+    };
+    setAnswerResults((prev) => [...prev, result]);
     setShowAnswers(true);
   };
 
@@ -89,6 +109,7 @@ export const QuestionsContextProvider = ({
     handleAnswerSelection,
     resetQuestion,
     showAnswers,
+    answerResults,
   };
 
   return (
