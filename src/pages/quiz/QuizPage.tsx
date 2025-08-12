@@ -1,19 +1,22 @@
-import QuestionItem from "./components/Question";
+import QuestionItem from "./components/quiz/Question";
 import { useQuestions } from "../../contexts/QuizContext";
+import { useQuizConfig } from "../../contexts/QuizConfigContext";
 import { useEffect } from "react";
+import Results from "./components/results/Results";
 
 const QuizPage = () => {
-  const { pickQuestionsForQuiz, questionsInQuiz, currentQuestion, showResults } =
+  const { pickQuestionsForQuiz, questionsInQuiz, currentQuestion, showResults, restartQuiz } =
     useQuestions();
+    const {numberOfQuestions} = useQuizConfig();
   useEffect(() => {
-    pickQuestionsForQuiz(20);
+    pickQuestionsForQuiz(numberOfQuestions);
   }, []);
 
   return (
     <>
       {questionsInQuiz.length > 0 && !showResults ? (
         <QuestionItem question={questionsInQuiz[currentQuestion]} time={10} />
-      ) : <h1>Results</h1>}
+      ) : <Results onRestart={restartQuiz}/>}
     </>
   );
 };

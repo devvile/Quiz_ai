@@ -4,5 +4,6 @@ export interface Question {
     answers:string[];
     answerSelected:null|number;
     wasCorrect:boolean;
+    explanation:string;
     id:number;
 }

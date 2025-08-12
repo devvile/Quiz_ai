@@ -9,8 +9,8 @@ import {
   LinearProgress,
   Box,
 } from "@mui/material";
-import type { Question } from "../../../types/Question";
-import { useQuestions } from "../../../contexts/QuizContext";
+import type { Question } from "../../../../types/Question";
+import { useQuestions } from "../../../../contexts/QuizContext";
 import { useEffect, useState, useRef } from "react";
 import Answer from "./Answer";
 

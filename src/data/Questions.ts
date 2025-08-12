@@ -12,7 +12,8 @@ export const QUESTIONS: Question[] = [
             "A built-in utility for converting types to their generic equivalents"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "TypeScript generics allow you to create reusable components that work with multiple types while preserving type safety. They use placeholder types (like T) that are specified when the function or class is used, enabling code reuse without sacrificing type checking."
     },
     {
         id: 2,
@@ -25,7 +26,8 @@ export const QUESTIONS: Question[] = [
             "useReducer"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The useState hook is the primary way to add state to functional components in React. It returns an array with the current state value and a setter function to update it, triggering re-renders when the state changes."
     },
     {
         id: 3,
@@ -38,7 +40,8 @@ export const QUESTIONS: Question[] = [
             "Converts a function to a generator"
         ],
         correctAnswer: 2,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The async keyword makes a function automatically return a Promise. Even if you return a regular value, it gets wrapped in a resolved Promise, allowing you to use await inside the function and handle asynchronous operations more elegantly."
     },
     {
         id: 4,
@@ -51,7 +54,8 @@ export const QUESTIONS: Question[] = [
             "To optimize component rendering"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "useEffect handles side effects in functional components, such as data fetching, subscriptions, timers, or DOM manipulation. It runs after the component renders and can be configured to run on every render, only once, or when specific dependencies change."
     },
     {
         id: 5,
@@ -64,7 +68,8 @@ export const QUESTIONS: Question[] = [
             "display: grid"
         ],
         correctAnswer: 2,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "Setting display: flex on an element makes it a flex container, enabling the flexbox layout model. This allows you to easily align, distribute, and arrange child elements using flex properties like justify-content and align-items."
     },
     {
         id: 6,
@@ -77,7 +82,8 @@ export const QUESTIONS: Question[] = [
             "'==' is faster than '==='"
         ],
         correctAnswer: 2,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The == operator performs type coercion, converting operands to the same type before comparison, which can lead to unexpected results. The === operator (strict equality) checks both type and value without any conversion, making it more predictable and generally preferred."
     },
     {
         id: 7,
@@ -90,7 +96,8 @@ export const QUESTIONS: Question[] = [
             "A method for creating DOM elements"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The Virtual DOM is a JavaScript representation of the actual DOM kept in memory. React uses it to optimize updates by comparing the new virtual DOM with the previous version, then efficiently updating only the parts of the real DOM that actually changed."
     },
     {
         id: 8,
@@ -103,7 +110,8 @@ export const QUESTIONS: Question[] = [
             "Omit<T, K>"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "Partial<T> is a utility type that makes all properties of type T optional. This is useful when you want to create objects that may only have some of the original type's properties, such as in update operations or partial configurations."
     },
     {
         id: 9,
@@ -116,7 +124,8 @@ export const QUESTIONS: Question[] = [
             "A technique for compressing JavaScript code"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "A closure is a function that has access to variables from its outer (enclosing) scope even after the outer function has finished executing. This creates a persistent local environment where the inner function can access and modify variables from its parent scope."
     },
     {
         id: 10,
@@ -129,7 +138,8 @@ export const QUESTIONS: Question[] = [
             "Sets the grid container's background"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The grid-template-areas property allows you to define named grid areas using a visual ASCII-art like syntax. You can then place grid items into these named areas using grid-area, making complex layouts more readable and maintainable."
     },
     {
         id: 11,
@@ -142,7 +152,8 @@ export const QUESTIONS: Question[] = [
             "To sort list items automatically"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The key prop helps React identify which list items have changed, been added, or removed. This enables React to efficiently update the DOM by reusing existing elements when possible, rather than recreating the entire list on every render."
     },
     {
         id: 12,
@@ -155,7 +166,8 @@ export const QUESTIONS: Question[] = [
             "shift()"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The push() method adds one or more elements to the end of an array and returns the new length. It modifies the original array in place. Other methods: unshift() adds to the beginning, pop() removes from the end, and shift() removes from the beginning."
     },
     {
         id: 13,
@@ -168,7 +180,8 @@ export const QUESTIONS: Question[] = [
             "A way to import modules"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their containing scope during compilation. This means you can use variables and functions before they're declared in your code, though the values aren't hoisted, only the declarations."
     },
     {
         id: 14,
@@ -181,7 +194,8 @@ export const QUESTIONS: Question[] = [
             "There is no difference"
         ],
         correctAnswer: 2,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "let has block scope (confined to the nearest enclosing block), while var has function scope (available throughout the entire function). let also prevents redeclaration in the same scope and creates a temporal dead zone, making it safer to use than var."
     },
     {
         id: 15,
@@ -194,7 +208,8 @@ export const QUESTIONS: Question[] = [
             "Optimizes memory usage"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The readonly keyword prevents properties from being modified after they're initially set. This is a compile-time check only - it doesn't provide runtime immutability, but helps catch accidental modifications during development."
     },
     {
         id: 16,
@@ -207,7 +222,8 @@ export const QUESTIONS: Question[] = [
             "position-index"
         ],
         correctAnswer: 0,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The z-index property controls the stacking order of positioned elements (elements with position other than static). Higher z-index values appear in front of lower values, allowing you to control which elements appear on top of others."
     },
     {
         id: 17,
@@ -220,7 +236,8 @@ export const QUESTIONS: Question[] = [
             "A way to animate DOM elements"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "Event bubbling is the process where an event starts at the target element and then propagates up through its parent elements to the document root. This allows parent elements to handle events that occurred on their children, enabling event delegation patterns."
     },
     {
         id: 18,
@@ -233,7 +250,8 @@ export const QUESTIONS: Question[] = [
             "To create memory-efficient components"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "React.memo() is a higher-order component that memoizes the result of a component. It prevents unnecessary re-renders by only re-rendering when props change, improving performance for components that receive the same props frequently."
     },
     {
         id: 19,
@@ -246,7 +264,8 @@ export const QUESTIONS: Question[] = [
             "px"
         ],
         correctAnswer: 2,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The vw (viewport width) unit is relative to 1% of the viewport's width. So 100vw equals the full width of the viewport. This makes it useful for responsive designs that need to scale with the browser window size."
     },
     {
         id: 20,
@@ -259,7 +278,8 @@ export const QUESTIONS: Question[] = [
             "A technique for error handling"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "Destructuring is a syntax that allows you to extract values from arrays or properties from objects into distinct variables. For example, const {name, age} = person or const [first, second] = array, providing a clean way to unpack data structures."
     },
     {
         id: 21,
@@ -272,7 +292,8 @@ export const QUESTIONS: Question[] = [
             "Handles component callbacks"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "useCallback returns a memoized version of a callback function that only changes if one of its dependencies changes. This prevents child components from re-rendering unnecessarily when they receive the same function reference as a prop."
     },
     {
         id: 22,
@@ -285,7 +306,8 @@ export const QUESTIONS: Question[] = [
             "A technique for error propagation"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The spread operator (...) expands iterables (like arrays) or object properties. It's useful for copying arrays/objects, merging them, or passing array elements as separate arguments to functions. For example, [...array] creates a shallow copy."
     },
     {
         id: 23,
@@ -298,7 +320,8 @@ export const QUESTIONS: Question[] = [
             "Optional<T>"
         ],
         correctAnswer: 2,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The union type T | undefined represents a value that can be either of type T or undefined. This is TypeScript's way of expressing optional values and is commonly used when a value might not be present or initialized."
     },
     {
         id: 24,
@@ -311,7 +334,8 @@ export const QUESTIONS: Question[] = [
             "A way to organize CSS files"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The CSS box model describes how the rectangular boxes around elements are structured. From inside out: content (the actual content), padding (space inside the border), border (the element's border), and margin (space outside the border)."
     },
     {
         id: 25,
@@ -324,7 +348,8 @@ export const QUESTIONS: Question[] = [
             "Node Project Manager"
         ],
         correctAnswer: 0,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "npm stands for Node Package Manager. It's the default package manager for Node.js that allows you to install, share, and manage JavaScript packages and dependencies for your projects through a command-line interface."
     },
     {
         id: 26,
@@ -337,7 +362,8 @@ export const QUESTIONS: Question[] = [
             "To minimize memory usage"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "useReducer is used for managing complex state logic that involves multiple sub-values or when the next state depends on the previous one. It uses a reducer function (similar to Redux) that takes the current state and an action, returning the new state."
     },
     {
         id: 27,
@@ -350,7 +376,8 @@ export const QUESTIONS: Question[] = [
             "text-bold"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The font-weight property controls the thickness or boldness of text. Common values include normal (400), bold (700), or numeric values from 100-900. It's part of the font family of CSS properties."
     },
     {
         id: 28,
@@ -363,7 +390,8 @@ export const QUESTIONS: Question[] = [
             "A method for handling errors"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It can be in one of three states: pending, fulfilled, or rejected, and allows you to handle async operations with .then() and .catch() methods."
     },
     {
         id: 29,
@@ -376,7 +404,8 @@ export const QUESTIONS: Question[] = [
             "Creates type aliases"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "An interface in TypeScript defines the structure or shape that an object should have. It specifies what properties and methods an object must contain, serving as a contract that classes or objects must follow, enabling better type checking and code documentation."
     },
     {
         id: 30,
@@ -389,7 +418,8 @@ export const QUESTIONS: Question[] = [
             "spacing"
         ],
         correctAnswer: 2,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The gap property (formerly known as grid-gap) controls the space between flex items in a flex container or grid items in a grid container. It's more convenient than using margins because it only adds space between items, not around the edges."
     },
     {
         id: 31,
@@ -402,7 +432,8 @@ export const QUESTIONS: Question[] = [
             "null is for objects, undefined is for primitives"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "null is an intentional assignment representing 'no value' or 'empty value', while undefined means a variable has been declared but not assigned a value, or a property doesn't exist. null is explicitly set by developers, undefined occurs naturally in JavaScript."
     },
     {
         id: 32,
@@ -415,7 +446,8 @@ export const QUESTIONS: Question[] = [
             "A testing framework"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "JSX (JavaScript XML) is a syntax extension that allows you to write HTML-like code within JavaScript. It gets transpiled to React.createElement() calls, making it easier to describe what the UI should look like in a more familiar, declarative way."
     },
     {
         id: 33,
@@ -428,7 +460,8 @@ export const QUESTIONS: Question[] = [
             "Attribute selector ([attr])"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "ID selectors (#id) have the highest specificity among these options. The specificity hierarchy is: inline styles (highest), IDs, classes/attributes/pseudo-classes, then elements/pseudo-elements (lowest). Higher specificity rules override lower specificity ones."
     },
     {
         id: 34,
@@ -441,7 +474,8 @@ export const QUESTIONS: Question[] = [
             "To set up routing"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "package.json is a manifest file that contains metadata about your Node.js project, including its name, version, description, dependencies, scripts, and other configuration. It's essential for package management and tells npm how to handle your project."
     },
     {
         id: 35,
@@ -454,7 +488,8 @@ export const QUESTIONS: Question[] = [
             "Removes duplicate elements from an array"
         ],
         correctAnswer: 0,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The map() method creates a new array by calling a provided function on every element in the original array. It doesn't modify the original array but returns a new one with the transformed elements, making it perfect for data transformation operations."
     },
     {
         id: 36,
@@ -467,7 +502,8 @@ export const QUESTIONS: Question[] = [
             "A type that extends another type"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "A union type uses the | operator to specify that a value can be one of several types. For example, string | number means the value can be either a string or a number. This provides flexibility while maintaining type safety."
     },
     {
         id: 37,
@@ -480,7 +516,8 @@ export const QUESTIONS: Question[] = [
             "position: center"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "In flexbox, justify-content: center centers items along the main axis (horizontally by default), while align-items: center centers items along the cross axis (vertically by default). Using both together achieves perfect centering in both directions."
     },
     {
         id: 38,
@@ -493,7 +530,8 @@ export const QUESTIONS: Question[] = [
             "To persist state to localStorage"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The setter function returned by useState updates the state value and triggers a re-render of the component. React will compare the new state with the previous state and re-render the component if they're different, updating the UI to reflect the new state."
     },
     {
         id: 39,
@@ -506,7 +544,8 @@ export const QUESTIONS: Question[] = [
             "Document Oriented Markup"
         ],
         correctAnswer: 0,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "DOM stands for Document Object Model. It's a programming interface that represents HTML and XML documents as a tree structure of objects, allowing JavaScript to dynamically access and modify the content, structure, and styling of web pages."
     },
     {
         id: 40,
@@ -519,7 +558,8 @@ export const QUESTIONS: Question[] = [
             "onEvent()"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "addEventListener() is the standard method for attaching event listeners to DOM elements. It allows you to specify the event type, the function to call, and options like whether to capture the event, providing more flexibility than inline event handlers."
     },
     {
         id: 41,
@@ -532,7 +572,8 @@ export const QUESTIONS: Question[] = [
             "To generate type documentation"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The type keyword creates type aliases, allowing you to define custom types, union types, intersection types, and more complex type definitions. It's purely a compile-time feature that helps make code more readable and maintainable."
     },
     {
         id: 42,
@@ -545,7 +586,8 @@ export const QUESTIONS: Question[] = [
             "visibility"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The opacity property controls the transparency level of an element, with values from 0 (completely transparent) to 1 (completely opaque). Unlike visibility: hidden, opacity preserves the element's space in the layout while making it transparent."
     },
     {
         id: 43,
@@ -558,7 +600,8 @@ export const QUESTIONS: Question[] = [
             "const is for objects, let for primitives, var for functions"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "const creates constants that can't be reassigned (though objects/arrays can be mutated), let creates block-scoped variables that can be reassigned, and var creates function-scoped variables with hoisting behavior. const and let are generally preferred over var in modern JavaScript."
     },
     {
         id: 44,
@@ -571,7 +614,8 @@ export const QUESTIONS: Question[] = [
             "A HTML template"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "A React component is a reusable piece of UI that encapsulates its own logic and rendering. Components can accept inputs (props), manage their own state, and return JSX describing what should be rendered. They can be function or class-based."
     },
     {
         id: 45,
@@ -584,7 +628,8 @@ export const QUESTIONS: Question[] = [
             "foreground-color"
         ],
         correctAnswer: 2,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The color property sets the foreground color of text content. It accepts various color formats including named colors (red), hex codes (#ff0000), RGB values (rgb(255,0,0)), and HSL values. It's one of the most basic CSS properties."
     },
     {
         id: 46,
@@ -597,7 +642,8 @@ export const QUESTIONS: Question[] = [
             "Converts array elements to strings"
         ],
         correctAnswer: 0,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The filter() method creates a new array containing only the elements that pass a test implemented by a provided function. It doesn't modify the original array but returns a filtered copy, making it useful for data filtering operations."
     },
     {
         id: 47,
@@ -610,7 +656,8 @@ export const QUESTIONS: Question[] = [
             "A tool for type conversion"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "A TypeScript interface defines the shape or structure that an object should have. It specifies what properties and methods an object must contain, their types, and whether they're optional. Interfaces provide compile-time type checking and better code documentation."
     },
     {
         id: 48,
@@ -623,7 +670,8 @@ export const QUESTIONS: Question[] = [
             "edge-radius"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "The border-radius property creates rounded corners on elements by curving the border edges. You can specify a single value for all corners or individual values for each corner. It works even when there's no visible border."
     },
     {
         id: 49,
@@ -636,7 +684,8 @@ export const QUESTIONS: Question[] = [
             "To handle component lifecycle"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "useContext allows functional components to consume context values that were provided by a Context.Provider higher up in the component tree. It's a way to access shared data without prop drilling through multiple component levels."
     },
     {
         id: 50,
@@ -649,6 +698,7 @@ export const QUESTIONS: Question[] = [
             "Makes element stick to the top when scrolling"
         ],
         correctAnswer: 1,
-        answerSelected: null
+        answerSelected: null,
+        explanation: "position: absolute removes an element from the normal document flow and positions it relative to its nearest positioned ancestor (an ancestor with position other than static). If no positioned ancestor exists, it positions relative to the initial containing block."
     }
 ]

@@ -16,6 +16,7 @@ interface QuizContextType {
   answerResults: AnswerResult[];
   handleAnswerSelection: (_optionId: number) => void;
   resetQuestion: () => void;
+  restartQuiz:()=>void;
 }
 
 interface AnswerResult {
@@ -96,6 +97,13 @@ export const QuestionsContextProvider = ({
     setShowAnswers(true);
   };
 
+  const restartQuiz = ()=>{
+    setCurrentQuestion(0);
+    setAnswerResults([]);
+    setIsLastQuestion(false);
+    setShowResults(false);
+  }
+
   const value = {
     currentQuestion,
     allQuestions,
@@ -110,6 +118,7 @@ export const QuestionsContextProvider = ({
     resetQuestion,
     showAnswers,
     answerResults,
+    restartQuiz
   };
 
   return (
