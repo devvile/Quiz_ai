@@ -7,7 +7,7 @@ interface AnswerProps {
   isCorrect: boolean;
   correctAnswer: number;
   selectedAnswer: number | null;
-  onSelect: (_answerIndex: number) => void;
+  onSelect?: (_answerIndex: number) => void;
 }
 
 const Answer = ({
@@ -29,10 +29,15 @@ const Answer = ({
       return "error.main";
     }
   };
+  const handleClick = () => {
+    if (onSelect && !showAnswers) {
+      onSelect(answerIndex);
+    }
+  };
   return (
     <Box sx={{ m: 1 }}>
       <Button
-        onClick={() => onSelect(answerIndex)}
+        onClick={() => handleClick()}
         variant="contained"
         disabled={showAnswers}
         sx={{

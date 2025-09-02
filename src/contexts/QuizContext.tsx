@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import type { Question } from "../types/Question";
+import type { AnswerResult } from "../types/AnswerResult";
 import { QUESTIONS } from "../data/Questions";
 
 interface QuizContextType {
@@ -19,14 +20,6 @@ interface QuizContextType {
   restartQuiz:()=>void;
 }
 
-interface AnswerResult {
-  questionIndex: number;
-  question: string;
-  selectedAnswer: number;
-  correctAnswer: number;
-  isCorrect: boolean;
-  answers: string[];
-}
 
 const QuestionsContext = createContext<undefined | QuizContextType>(undefined);
 
@@ -92,6 +85,7 @@ export const QuestionsContextProvider = ({
       correctAnswer: currentQuestionObj.correctAnswer,
       isCorrect: isAnswerCorrect,
       answers: currentQuestionObj.answers,
+      explanation:currentQuestionObj.explanation
     };
     setAnswerResults((prev) => [...prev, result]);
     setShowAnswers(true);
